@@ -1,1 +1,29 @@
-0x03-python-data_structures 0-print_list_integer.py 1-element_at.py 2-replace_in_list.py 3-print_reversed_list_integer.py 4-new_in_list.py 5-no_c.py 6-print_matrix_integer.py 7-add_tuple.py 8-multiple_returns.py 9-max_integer.py 10-divisible_by_2.py 11-delete_at.py 12-switch.py 13-is_palindrome.c
+#ifndef LISTS_H
+#define LISTS_H
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
+
+/**
+ * struct listint_s - singly linked list
+ * @n: integer
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
+ * for Holberton project
+ */
+typedef struct listint_s
+{
+	int n;
+	struct listint_s *next;
+} listint_t;
+
+size_t print_listint(const listint_t *h);
+listint_t *add_nodeint_end(listint_t **head, const int n);
+void free_listint(listint_t *head);
+
+void reverse_listint(listint_t **head);
+int is_palindrome(listint_t **head);
+
+#endif /* LISTS_H */
