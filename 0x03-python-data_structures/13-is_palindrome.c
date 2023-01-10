@@ -1,1 +1,72 @@
-0x03-python-data_structures 0-print_list_integer.py 1-element_at.py 2-replace_in_list.py 3-print_reversed_list_integer.py 4-new_in_list.py 5-no_c.py 6-print_matrix_integer.py 7-add_tuple.py 8-multiple_returns.py 9-max_integer.py 10-divisible_by_2.py 11-delete_at.py 12-switch.py
+#include "lists.h"
+
+/**
+ * reverse_listint - reverses a linked list
+ * @head: pointer to the first node in the list
+ *
+ * Return: pointer to the first node in the new list
+ */
+void reverse_listint(listint_t **head)
+{
+	listint_t *prev = NULL;
+	listint_t *current = *head;
+	listint_t *next = NULL;
+
+	while (current)
+	{
+		next = current->next;
+		current->next = prev;
+		prev = current;
+		current = next;
+	}
+
+	*head = prev;
+}
+
+/**
+ * is_palindrome - checks if a linked list is a palindrome
+ * @head: double pointer to the linked list
+ *
+ * Return: 1 if it is, 0 if not
+ */
+int is_palindrome(listint_t **head)
+{
+	listint_t *slow = *head, *fast = *head, *temp = *head, *dup = NULL;
+
+	if (*head == NULL || (*head)->next == NULL)
+		return (1);
+
+	while (1)
+	{
+		fast = fast->next->next;
+		if (!fast)
+		{
+			dup = slow->next;
+			break;
+		}
+		if (!fast->next)
+		{
+			dup = slow->next->next;
+			break;
+		}
+		slow = slow->next;
+	}
+
+	reverse_listint(&dup);
+
+	while (dup && temp)
+	{
+		if (temp->n == dup->n)
+		{
+			dup = dup->next;
+			temp = temp->next;
+		}
+		else
+			return (0);
+	}
+
+	if (!dup)
+		return (1);
+
+	return (0);
+}
