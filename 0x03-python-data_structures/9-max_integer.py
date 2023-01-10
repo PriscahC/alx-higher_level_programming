@@ -1,1 +1,10 @@
-0x03-python-data_structures 0-print_list_integer.py 1-element_at.py 2-replace_in_list.py 3-print_reversed_list_integer.py 4-new_in_list.py 5-no_c.py 6-print_matrix_integer.py 7-add_tuple.py 8-multiple_returns.py
+#!/usr/bin/python3
+def max_integer(my_list=[]):
+    if len(my_list) == 0:
+        return "None"
+    else:
+        max = my_list[0]
+        for i in range(len(my_list)):
+            if my_list[i] > max:
+                max = my_list[i]
+        return max
