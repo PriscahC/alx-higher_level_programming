@@ -1,1 +1,7 @@
-0x03-python-data_structures 0-print_list_integer.py 1-element_at.py 2-replace_in_list.py 3-print_reversed_list_integer.py 4-new_in_list.py 5-no_c.py 6-print_matrix_integer.py 7-add_tuple.py 8-multiple_returns.py 9-max_integer.py 10-divisible_by_2.py
+#!/usr/bin/python3
+def delete_at(my_list=[], idx=0):
+    if idx < 0 or idx > len(my_list) - 1:
+        return my_list
+    else:
+        del my_list[idx]
+    return my_list
