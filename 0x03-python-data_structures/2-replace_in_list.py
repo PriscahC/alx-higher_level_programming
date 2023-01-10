@@ -1,1 +1,7 @@
-0x03-python-data_structures 0-print_list_integer.py 1-element_at.py
+#!/usr/bin/python3
+def replace_in_list(my_list, idx, element):
+    if idx < 0 or idx > len(my_list) - 1:
+        return my_list
+    else:
+        my_list[idx] = element
+        return my_list
