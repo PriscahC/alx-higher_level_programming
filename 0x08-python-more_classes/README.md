@@ -1,46 +1,35 @@
-0x08. Python - More Classes and Objects
-=======================================
-
--   By Dev Nderitu
-
 Tasks
 -----
 
 ### 0\. Simple rectangle
 
-mandatory
-
-Score: 0.00% (Checks completed: 0.00%)
-
 Write an empty class `Rectangle` that defines a rectangle:
 
 -   You are not allowed to import any module
 
-```
-guillaume@ubuntu:~/0x08$ cat 0-main.py
-#!/usr/bin/python3
-Rectangle = __import__('0-rectangle').Rectangle
 
-my_rectangle = Rectangle()
-print(type(my_rectangle))
-print(my_rectangle.__dict__)
+tu:~/0x08$ cat 0-main.py
 
-guillaume@ubuntu:~/0x08$ ./0-main.py
-<class '0-rectangle.Rectangle'>
-{}
-guillaume@ubuntu:~/0x08$
+ Rectangle()
+rectangle))
+ngle.__dict__)
 
-```
+tu:~/0x08$ ./0-main.py
+angle.Rectangle'>
 
-**No test cases needed**
+tu:~/0x08$
 
-**Repo:**
 
--   GitHub repository: `alx-higher_level_programming`
--   Directory: `0x08-python-more_classes`
--   File: `0-rectangle.py`
 
- Done? Help Check your code Ask for a new correction Get a sandbox QA Review
+s needed**
+
+
+
+ository: `alx-higher_level_programming`
+  Directory: `0x08-python-more_classes`
+  File: `0-rectangle.py`
+
+one? Help Check your code Ask for a new correction Get a sandbox QA Review
 
 ### 1\. Real definition of a rectangle
 
